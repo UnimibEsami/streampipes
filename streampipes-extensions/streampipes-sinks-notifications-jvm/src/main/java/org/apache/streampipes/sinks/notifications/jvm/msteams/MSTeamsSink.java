@@ -28,6 +28,7 @@ import org.apache.streampipes.sdk.StaticProperties;
 import org.apache.streampipes.sdk.builder.DataSinkBuilder;
 import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
 import org.apache.streampipes.sdk.helpers.Alternatives;
+import org.apache.streampipes.sdk.helpers.CodeLanguage;
 import org.apache.streampipes.sdk.helpers.EpRequirements;
 import org.apache.streampipes.sdk.helpers.Labels;
 import org.apache.streampipes.sdk.helpers.Locales;
@@ -113,7 +114,7 @@ public class MSTeamsSink extends StreamPipesDataSink {
                           Labels.withId(KEY_MESSAGE_ADVANCED),
                           StaticProperties.stringFreeTextProperty(
                                   Labels.withId(KEY_MESSAGE_ADVANCED_CONTENT),
-                                  true,
+                                  false,
                                   true
                           )
                   )
