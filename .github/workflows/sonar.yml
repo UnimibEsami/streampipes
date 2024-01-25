@@ -2,7 +2,7 @@ name: SonarCloud
 on:
   push:
     branches:
-      - master
+      - dev
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -24,5 +24,5 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          ESAME2: ${{ secrets.ESAME2 }}
+          SONAR_TOKEN: ${{ secrets.ESAME2 }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=UnimibEsami_streampipes -Dsonar.organization=unimibesami -Dsonar.host.url=https://sonarcloud.io
